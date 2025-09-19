@@ -1,4 +1,4 @@
-# Cravoo Web Portal.
+# Cravoo Web Portal
 
 ## Project info
 
