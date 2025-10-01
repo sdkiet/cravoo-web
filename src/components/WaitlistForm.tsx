@@ -12,8 +12,22 @@ const WaitlistForm = () => {
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
+  const addUser = async (email, phone) => {
+    const API_URL = import.meta.env.VITE_API_URL; // set this in Vercel/Vite .env
+
+    const res = await fetch(`${API_URL}/api/users/addqueue`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, phone }),
+    });
+
+    if (!res.ok) {
+      throw new Error(await res.text());
+    }
+
+    return res.json();
+  };
   const handleSubmit = async (e: React.FormEvent) => {
-    console.log("meta.env.VITE_API_URL", API_URL)
     e.preventDefault();
     if (!email) {
       toast({
@@ -23,7 +37,7 @@ const WaitlistForm = () => {
       });
       return;
     }
-     if (!phone) {
+    if (!phone) {
       toast({
         title: "Email required",
         description: "Please enter your phone number",
@@ -32,17 +46,35 @@ const WaitlistForm = () => {
       return;
     }
 
-    setIsLoading(true);
-    
-    // Simulate API call
-    setTimeout(() => {
+    try {
+      const user = await addUser(name, email);
+
       setIsSubmitted(true);
       setIsLoading(false);
+
       toast({
         title: "You're on the list! 🚀",
-        description: "We'll notify you when Cravoo is live",
+        description: `Welcome ${user.name}, we'll notify you when Cravoo is live!`,
       });
-    }, 1000);
+    } catch (err) {
+      console.error("Error adding user:", err);
+      setIsLoading(false);
+
+      toast({
+        title: "Oops! Something went wrong ❌",
+        description: err.message || "Please try again later",
+        variant: "destructive",
+      });
+    }
+    // // Simulate API call
+    // setTimeout(() => {
+    //   setIsSubmitted(true);
+    //   setIsLoading(false);
+    //   toast({
+    //     title: "You're on the list! 🚀",
+    //     description: "We'll notify you when Cravoo is live",
+    //   });
+    // }, 1000);
   };
 
   if (isSubmitted) {
@@ -75,7 +107,7 @@ const WaitlistForm = () => {
               Be the first to experience fast, fresh food delivery with Cravoo
             </p>
           </div>
-          
+
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="relative">
               <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 text-muted-foreground w-5 h-5" />
@@ -88,7 +120,7 @@ const WaitlistForm = () => {
                 required
               />
             </div>
-            
+
             <div className="relative">
               <Phone className="absolute left-4 top-1/2 transform -translate-y-1/2 text-muted-foreground w-5 h-5" />
               <Input
@@ -99,16 +131,18 @@ const WaitlistForm = () => {
                 className="pl-12 py-4 text-lg rounded-xl border-2 focus:border-primary"
               />
             </div>
-            
+
             <Button
               type="submit"
               disabled={isLoading}
               className="w-full bg-primary hover:bg-primary-light text-white py-4 text-lg rounded-xl font-semibold shadow-elegant transform hover:scale-[1.02] transition-all duration-300"
             >
-              {isLoading ? "Adding you to the list..." : "Notify Me When It's Live"}
+              {isLoading
+                ? "Adding you to the list..."
+                : "Notify Me When It's Live"}
             </Button>
           </form>
-          
+
           {/* <p className="text-center text-sm text-muted-foreground mt-6">
             We respect your privacy. Unsubscribe at any time.
           </p> */}
