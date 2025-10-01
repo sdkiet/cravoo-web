@@ -47,7 +47,7 @@ const WaitlistForm = () => {
     }
 
     try {
-      const user = await addUser(name, email);
+      const user = await addUser(email, phone);
 
       setIsSubmitted(true);
       setIsLoading(false);
