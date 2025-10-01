@@ -3,7 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, CheckCircle } from "lucide-react";
-const API_URL = process.env.NEXT_PUBLIC_API_URL
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
 const WaitlistForm = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -108,9 +109,9 @@ const WaitlistForm = () => {
             </Button>
           </form>
           
-          <p className="text-center text-sm text-muted-foreground mt-6">
+          {/* <p className="text-center text-sm text-muted-foreground mt-6">
             We respect your privacy. Unsubscribe at any time.
-          </p>
+          </p> */}
         </div>
       </div>
     </section>
