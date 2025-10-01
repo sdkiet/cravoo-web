@@ -21,6 +21,14 @@ const WaitlistForm = () => {
       });
       return;
     }
+     if (!phone) {
+      toast({
+        title: "Email required",
+        description: "Please enter your email address",
+        variant: "destructive",
+      });
+      return;
+    }
 
     setIsLoading(true);
     
