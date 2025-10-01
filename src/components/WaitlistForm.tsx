@@ -13,7 +13,7 @@ const WaitlistForm = () => {
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
-    console.log("VITE_API_URL", API_URL)
+    console.log("meta.env.VITE_API_URL", API_URL)
     e.preventDefault();
     if (!email) {
       toast({
