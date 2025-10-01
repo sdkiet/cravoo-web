@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, CheckCircle } from "lucide-react";
-const API_URL = process.env.API_URL;
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 const WaitlistForm = () => {
   const [email, setEmail] = useState("");
@@ -13,7 +13,7 @@ const WaitlistForm = () => {
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
-    console.log("API_URL", API_URL)
+    console.log("NEXT_PUBLIC_API_URL", API_URL)
     e.preventDefault();
     if (!email) {
       toast({
