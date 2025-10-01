@@ -53,7 +53,7 @@ const WaitlistForm = () => {
 
       toast({
         title: "You're on the list! 🚀",
-        description: `Welcome ${user.name}, we'll notify you when Cravoo is live!`,
+        description: `Welcome, we'll notify you when Cravoo is live!`,
       });
     } catch (err) {
       console.error("Error adding user:", err);
