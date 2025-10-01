@@ -39,7 +39,7 @@ const WaitlistForm = () => {
     }
     if (!phone) {
       toast({
-        title: "Email required",
+        title: "Phone required",
         description: "Please enter your phone number",
         variant: "destructive",
       });
@@ -65,15 +65,6 @@ const WaitlistForm = () => {
         variant: "destructive",
       });
     }
-    // // Simulate API call
-    // setTimeout(() => {
-    //   setIsSubmitted(true);
-    //   setIsLoading(false);
-    //   toast({
-    //     title: "You're on the list! 🚀",
-    //     description: "We'll notify you when Cravoo is live",
-    //   });
-    // }, 1000);
   };
 
   if (isSubmitted) {

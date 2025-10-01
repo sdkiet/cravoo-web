@@ -11,19 +11,32 @@ const Footer = () => {
               <span className="text-white font-bold text-xl">Cravoo</span>
             </div>
             <p className="text-white/80 mb-6 max-w-md">
-              The future of food delivery is coming. Fast, fresh, and always delicious.
+              The future of food delivery is coming. Fast, fresh, and always
+              delicious.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors">
+              <a
+                href="#"
+                className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors"
+              >
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors">
+              <a
+                href="#"
+                className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors"
+              >
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors">
+              <a
+                href="#"
+                className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors"
+              >
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="mailto:hello@cravoo.app" className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors">
+              <a
+                href="mailto:hello@cravoo.app"
+                className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors"
+              >
                 <Mail className="w-5 h-5" />
               </a>
             </div>
@@ -33,10 +46,17 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-lg mb-4">Learn More</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-white/80 hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#" className="text-white/80 hover:text-white transition-colors">How it Works</a></li>
+              <li>
+                <a
+                  href="#"
+                  className="text-white/80 hover:text-white transition-colors"
+                >
+                  About Us
+                </a>
+              </li>
+              {/* <li><a href="#" className="text-white/80 hover:text-white transition-colors">How it Works</a></li>
               <li><a href="#" className="text-white/80 hover:text-white transition-colors">Blog</a></li>
-              <li><a href="#" className="text-white/80 hover:text-white transition-colors">Careers</a></li>
+              <li><a href="#" className="text-white/80 hover:text-white transition-colors">Careers</a></li> */}
             </ul>
           </div>
 
@@ -76,9 +96,24 @@ const Footer = () => {
             © 2025 Cravoo. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-white/60 hover:text-white text-sm transition-colors">Privacy Policy</a>
-            <a href="#" className="text-white/60 hover:text-white text-sm transition-colors">Terms of Service</a>
-            <a href="#" className="text-white/60 hover:text-white text-sm transition-colors">Contact</a>
+            <a
+              href="#"
+              className="text-white/60 hover:text-white text-sm transition-colors"
+            >
+              Privacy Policy
+            </a>
+            <a
+              href="#"
+              className="text-white/60 hover:text-white text-sm transition-colors"
+            >
+              Terms of Service
+            </a>
+            <a
+              href="#"
+              className="text-white/60 hover:text-white text-sm transition-colors"
+            >
+              Contact
+            </a>
           </div>
         </div>
       </div>
