@@ -107,8 +107,10 @@ const WaitlistForm = () => {
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 className="pl-12 py-4 text-lg rounded-xl border-2 focus:border-primary"
+                required
               />
             </div>
+
             <div className="relative">
               <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 text-muted-foreground w-5 h-5" />
               <Input
@@ -117,7 +119,6 @@ const WaitlistForm = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="pl-12 py-4 text-lg rounded-xl border-2 focus:border-primary"
-                required
               />
             </div>
 
