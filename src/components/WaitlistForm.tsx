@@ -58,7 +58,7 @@ const WaitlistForm = () => {
     } catch (err) {
       setIsLoading(false);
 
-      if (err.response?.status === 409) {
+      if (err === "User already exists") {
         toast({
           title: "You're already on the list! 🚀",
           description: `We'll notify you when Cravoo is live!`,
