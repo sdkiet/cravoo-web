@@ -56,15 +56,15 @@ const WaitlistForm = () => {
         description: `Welcome, we'll notify you when Cravoo is live!`,
       });
     } catch (err) {
-      if (err.response.code == 409) {
-        setIsLoading(false);
+      setIsLoading(false);
+
+      if (err.response?.status === 409) {
         toast({
           title: "You're already on the list! 🚀",
           description: `We'll notify you when Cravoo is live!`,
         });
         return;
       }
-      setIsLoading(false);
 
       toast({
         title: "Oops! Something went wrong ❌",
