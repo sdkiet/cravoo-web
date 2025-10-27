@@ -56,7 +56,14 @@ const WaitlistForm = () => {
         description: `Welcome, we'll notify you when Cravoo is live!`,
       });
     } catch (err) {
-      console.error("Error adding user:", err);
+      if (err.response.code == 409) {
+        setIsLoading(false);
+        toast({
+          title: "You're already on the list! 🚀",
+          description: `We'll notify you when Cravoo is live!`,
+        });
+        return;
+      }
       setIsLoading(false);
 
       toast({
@@ -105,6 +112,7 @@ const WaitlistForm = () => {
                 type="tel"
                 placeholder="Phone number"
                 value={phone}
+                minLength={10}
                 onChange={(e) => setPhone(e.target.value)}
                 className="pl-12 py-4 text-lg rounded-xl border-2 focus:border-primary"
                 required
