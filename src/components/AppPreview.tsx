@@ -23,7 +23,8 @@ const AppPreview = () => {
             <span className="text-primary">delivered fast</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            From crispy pizzas to steaming curries, we're bringing you the best local restaurants with lightning-fast delivery.
+            From crispy pizzas to steaming curries, we're bringing you the best
+            local and global food with lightning fast delivery.
           </p>
         </div>
 
@@ -71,24 +72,36 @@ const AppPreview = () => {
             <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">⚡</span>
             </div>
-            <h4 className="text-xl font-semibold text-foreground mb-2">Lightning Fast</h4>
-            <p className="text-muted-foreground">Food delivered in minutes, not hours</p>
+            <h4 className="text-xl font-semibold text-foreground mb-2">
+              Lightning Fast
+            </h4>
+            <p className="text-muted-foreground">
+              Food delivered in minutes, not hours
+            </p>
           </div>
-          
+
           <div className="text-center p-6">
             <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">🥘</span>
             </div>
-            <h4 className="text-xl font-semibold text-foreground mb-2">Fresh & Quality</h4>
-            <p className="text-muted-foreground">Only the freshest ingredients from top restaurants</p>
+            <h4 className="text-xl font-semibold text-foreground mb-2">
+              Fresh & Quality
+            </h4>
+            <p className="text-muted-foreground">
+              Only the freshest ingredients from top brands
+            </p>
           </div>
-          
+
           <div className="text-center p-6">
             <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">📱</span>
             </div>
-            <h4 className="text-xl font-semibold text-foreground mb-2">Easy Ordering</h4>
-            <p className="text-muted-foreground">Simple, intuitive app experience</p>
+            <h4 className="text-xl font-semibold text-foreground mb-2">
+              Easy Ordering
+            </h4>
+            <p className="text-muted-foreground">
+              Simple, intuitive app experience
+            </p>
           </div>
         </div>
       </div>
