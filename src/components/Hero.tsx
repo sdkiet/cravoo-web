@@ -32,9 +32,8 @@ const Hero = () => {
             CRAVE WORTHY FOOD, DELIVERED IN MINUTES
           </p>
 
-          <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto leading-relaxed">
-            We're cooking up something delicious. Join the waitlist to be the
-            first to know when we launch.
+          <p className="text-md text-white/80 mb-8 max-w-2xl mx-auto leading-relaxed">
+            {`We're cooking up something delicious. Join the waitlist to be the first to know when we launch.`}
           </p>
 
           <Button
